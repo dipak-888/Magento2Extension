@@ -1,0 +1,12 @@
+type Query {
+    orderDetails (
+        order_id: String @doc(description: "Search Order List.")
+    ): OrderDetails @resolver(class: "Custom\\PracticeGraphql\\Model\\Resolver\\OrderDetails") @doc(description: "Return details about a Order Details.")
+}
+type OrderDetails {
+    order_id: String @doc(description: "The ID of a Post page.")
+    amount:Int @doc(description :"Grand total")
+    status: String @doc(description: "Order Status")
+    email: String @doc(description: "Order Customer email")
+    order_date: String @doc(description: "Order Customer email")
+}
